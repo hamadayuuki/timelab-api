@@ -1,1 +1,1 @@
-uvicorn timelabAPI:app
+web: uvicorn timelabAPI:app
