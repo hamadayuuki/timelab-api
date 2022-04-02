@@ -1,0 +1,1 @@
+uvicorn timelabAPI:app --reload
