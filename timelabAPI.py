@@ -10,10 +10,7 @@ app = FastAPI()
 @app.get("/createQrCode/{roomId}")
 async def createQrCode(roomId):
 
-    imageCv2 = timeLabQrCode.roomIdToPngQrCode(roomId)
-    print("timelabAPI: type(imageCv2): ", type(imageCv2))
-    print("timelabAPI, imageCv2の直後")
+    imageCv2 = timeLabQrCode.roomIdToPngQrCode(roomId)   # base64に変換するとき OpneCv型 である必要あり
     imageBase64 = timeLabQrCode.pngEncodeToBase64(imageCv2)
-    print("timelabAPI, imgBase64の直後")
 
     return {"imageBase64": imageBase64}   # 自動でjson形式になる

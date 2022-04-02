@@ -21,7 +21,6 @@ def roomIdToPngQrCode(roomId):
     IMG_SIZE = 1024   # 2^x
     TIMELAB_ICON_SIZE = 200
     TIMELAB_ICON_PATH = "image/TIMELAB_App_Icon.png"
-    # roomId = "0123456789"
     pngImageName = "TIMELAB_" + roomId + ".png"
 
     qrCode = qrcode.make(roomId, error_correction = qrcode.constants.ERROR_CORRECT_H).convert('RGB')
@@ -39,9 +38,8 @@ def roomIdToPngQrCode(roomId):
 
 
 def pngEncodeToBase64(img):
-    print("pngEncodeToBase64 実行開始")
     _, encimg = cv2.imencode(".png", img)
     imgStr = encimg.tostring()
     imgBase64 = base64.b64encode(imgStr).decode("utf-8")
-    print("pngEncodeToBase64 実行終了")
+    
     return imgBase64
