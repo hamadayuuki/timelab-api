@@ -1,6 +1,6 @@
 fastapi
 uvicorn
 qrcode
-opencv-python
+opencv-python--headless
 pillow
 numpy
