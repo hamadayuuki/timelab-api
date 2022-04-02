@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+gunicorn
 qrcode
 opencv-python--headless
 pillow
